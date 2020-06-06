@@ -1,11 +1,456 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>开鑫贷</title>
+    <!-- 引入重置样式 -->
+    <link rel="stylesheet" href="./css/reset.min.css">
+    <!-- 引入公共样式 -->
+    <link rel="stylesheet" href="./css/common.min.css">
+    <!-- 引入bootstrap的css -->
+    <link rel="stylesheet" href="./lib/bootstrap4/css/bootstrap.min.css">
+    <!-- 引入当前页面css -->
+    <link rel="stylesheet" href="./css/index.min.css">
 </head>
+
 <body>
-    
+    <!-- 头部 -->
+    <header class="header">
+        <div class=" container">
+            <ul>
+                <li>
+                    <span class="icon-tel1">
+                    </span>
+                    服务电话:<span class="tel">400-621-6021</span>
+                </li>
+                <li>
+                    <a href="#">
+                        下载客户端
+                    </a>
+                    <span class="icon-tel2">
+
+                    </span>
+                </li>
+            </ul>
+            <ul class="nav-right">
+                <li>
+                    <a href="#">前往开鑫金服</a>
+                </li>
+                <li>
+                    <a href="#">
+                        站点地图
+                    </a>
+                </li>
+                <li>
+                    <a href="#">关于我们</a>
+                </li>
+                <li>
+                    <a href="#">帮助中心</a>
+                </li>
+                <li>
+                    <a href="#">
+                        立即登录
+                    </a>
+                </li>
+                <li>
+                    <a href="#">免费注册</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <!-- 内容区-顶部 -->
+    <main class="main main-top">
+        <div class="top container">
+            <div class="logo">
+                <a href="#"><img src="./images/logo_kxd.png" alt=""></a>
+                <a href="#"><img src="./images/kxd-slogan.png" alt=""></a>
+            </div>
+            <div class="top-nav">
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#">我要出借</a></li>
+                    <li><a href="#">我要借款</a></li>
+                    <li><a href="#">信息披露</a></li>
+                    <li class="user"><a href="#"><span class="icon"></span> 我的账户</a></li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    <!-- 轮播图 -->
+    <div class="banner">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./images/banner012.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/banner013.jpg" class="d-block w-100" alt="...">
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <!-- 内容区 -->
+    <main class="main container">
+        <div class="notice">
+            <div class="left">
+                周一至周日：00:00-24:00（法定节假日及系统维护期间以网站公告为准）
+            </div>
+            <div class="right">
+                <div class="up-down">
+                    <span class="icon"></span>
+                    <div class="title">
+                        2020年劳动节期间服务时间调整的公告
+                    </div>
+                    <div>
+                        2020-05-04
+                    </div>
+                </div>
+                <a href="#">更多 ></a>
+            </div>
+        </div>
+        <div class="product">
+            <div class="title">
+                <div>产品专区</div>
+                <div> <span>出借有风险，选择请谨慎</span> <a href="#">更多项目 ></a></div>
+            </div>
+            <div class="content">
+                <div class="left">
+                    <h2>小额分散</h2>
+                    <p>种类丰富的精选P2P产品
+                        <hr>
+                    </p>
+                    <p>产品种类丰富，金额灵活选择</p>
+                    <p>自运行以来项目本息均按期兑付</p>
+
+                    <div class="bottom">
+
+                        <div>
+                            <a href="#" class="title1">鑫普汇</a>
+                            <div >
+                                <a href="#" class="title2">新手指引-P2P是什么？</a>
+                            </div>
+                        </div>
+                        <div class="icon">
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <ul>
+                        <li>
+                            <div class="title">
+                                <a href="#">鑫普汇 DK190107015419</a>
+                                <div><span>可转让</span></div>
+                                <div><span>存管支付</span></div>
+                            </div>
+                            <ul class="center">
+                                <li>
+                                    <p>23个月</p>
+                                    <span>期限</span>
+                                </li>
+                                <li>
+                                    <p>90,000</p>
+                                    <span>项目金额</span>
+                                </li>
+                                <li>
+                                    <p>合作机构担保</p>
+                                    <span>项目特点</span>
+                                </li>
+                                <li>
+                                    <p>按月等额本息</p>
+                                    <span>还款方式</span>
+                                </li>
+                                <li>
+                                    <div>
+                                        <div class="bar">
+                                            <div></div>
+                                            <span>100%</span>
+                                        </div>
+                                        <div class="buy"> 
+                                            <a href="#">被抢光了</a>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            
+                        </li>
+                        <li>
+                            <div class="title">
+                                <a href="#">鑫普汇 DK190104015396</a>
+                                <div><span>可转让</span></div>
+                                <div><span>存管支付</span></div>
+                            </div>
+                            <ul class="center">
+                                <li>
+                                    <p>23个月</p>
+                                    <span>期限</span>
+                                </li>
+                                <li>
+                                    <p>80,000</p>
+                                    <span>项目金额</span>
+                                </li>
+                                <li>
+                                    <p>合作机构担保</p>
+                                    <span>项目特点</span>
+                                </li>
+                                <li>
+                                    <p>按月等额本息</p>
+                                    <span>还款方式</span>
+                                </li>
+                                <li>
+                                    <div>
+                                        <div class="bar">
+                                            <div></div>
+                                            <span>100%</span>
+                                        </div>
+                                        <div class="buy"> 
+                                            <a href="#">被抢光了</a>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            
+                        </li>
+                        <li>
+                            <div class="title">
+                                <a href="#">鑫普汇 DK190104015398</a>
+                                <div><span>可转让</span></div>
+                                <div><span>存管支付</span></div>
+                            </div>
+                            <ul class="center">
+                                <li>
+                                    <p>23个月</p>
+                                    <span>期限</span>
+                                </li>
+                                <li>
+                                    <p>30,000</p>
+                                    <span>项目金额</span>
+                                </li>
+                                <li>
+                                    <p>合作机构担保</p>
+                                    <span>项目特点</span>
+                                </li>
+                                <li>
+                                    <p>按月等额本息</p>
+                                    <span>还款方式</span>
+                                </li>
+                                <li>
+                                    <div>
+                                        <div class="bar">
+                                            <div></div>
+                                            <span>100%</span>
+                                        </div>
+                                        <div class="buy"> 
+                                            <a href="#">被抢光了</a>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="transfer">
+            <div class="title">
+                <div>转让专区</div>
+                <div> <span>出借有风险，选择请谨慎</span> <a href="#">更多项目 ></a></div>
+            </div>
+            <div class="content">
+                <div class="left">
+                    <h2>选择多样</h2>
+                    <p>其他出借人转让的资产
+                        <hr>
+                    </p>
+                    <p>期限选择更多，更短期限</p>
+                    <p>持有30天可转让，资金回笼快</p>
+
+                    <div class="bottom">
+
+                        <div>
+                            <a href="#" class="title1">转让</a>
+                            <div >
+                                <a href="#" class="title2">新手指引-转让专区是什么？</a>
+                            </div>
+                        </div>
+                        <div class="icon">
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <ul>
+                        <li>
+                            <div class="title">
+                                <a href="#">转让 ZT200324005337</a>
+                                <div><span>可转让</span></div>
+                                <div><span>需全款购买</span></div>
+                                <div><span>存管支付</span></div>
+                                
+                            </div>
+                            <ul class="center">
+                                <li>
+                                    <p>4个月28天</p>
+                                    <span>期限</span>
+                                </li>
+                                <li>
+                                    <p>2,218.22</p>
+                                    <span>项目金额</span>
+                                </li>
+                                <li>
+                                    <p>合作机构担保</p>
+                                    <span>项目特点</span>
+                                </li>
+                                <li>
+                                    <p>按月等额本息</p>
+                                    <span>还款方式</span>
+                                </li>
+                                <li>
+                                    <div>
+                                        <div class="bar">
+                                            <div></div>
+                                            <span>100%</span>
+                                        </div>
+                                        <div class="buy"> 
+                                            <a href="#">被抢光了</a>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            
+                        </li>
+                        <li>
+                            <div class="title">
+                                <a href="#">转让 ZT200324005336</a>
+                                <div><span>可转让</span></div>
+                                <div><span>需全款购买</span></div>
+                                <div><span>存管支付</span></div>
+                            </div>
+                            <ul class="center">
+                                <li>
+                                    <p>4个月28天</p>
+                                    <span>期限</span>
+                                </li>
+                                <li>
+                                    <p>2,218.22</p>
+                                    <span>项目金额</span>
+                                </li>
+                                <li>
+                                    <p>合作机构担保</p>
+                                    <span>项目特点</span>
+                                </li>
+                                <li>
+                                    <p>按月等额本息</p>
+                                    <span>还款方式</span>
+                                </li>
+                                <li>
+                                    <div>
+                                        <div class="bar">
+                                            <div></div>
+                                            <span>100%</span>
+                                        </div>
+                                        <div class="buy"> 
+                                            <a href="#">被抢光了</a>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            
+                        </li>
+                        <li>
+                            <div class="title">
+                                <a href="#">转让 ZT200318005322</a>
+                                <div><span>可转让</span></div>
+                                <div><span>需全款购买</span></div>
+                                <div><span>存管支付</span></div>
+                            </div>
+                            <ul class="center">
+                                <li>
+                                    <p>4个月9天</p>
+                                    <span>期限</span>
+                                </li>
+                                <li>
+                                    <p>2,043.19</p>
+                                    <span>项目金额</span>
+                                </li>
+                                <li>
+                                    <p>合作机构担保</p>
+                                    <span>项目特点</span>
+                                </li>
+                                <li>
+                                    <p>按月等额本息</p>
+                                    <span>还款方式</span>
+                                </li>
+                                <li>
+                                    <div>
+                                        <div class="bar">
+                                            <div></div>
+                                            <span>100%</span>
+                                        </div>
+                                        <div class="buy"> 
+                                            <a href="#">被抢光了</a>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="top">
+            <div class="container">
+                <div>
+                    <p>服务电话</p>
+                    <p class="tel">400-621-6021</p>
+                    <p>人工服务时间</p>
+                    <p>法定工作日9:00-22:00</p>
+                    <p>周六 周日9:00-18:00</p>
+                </div>
+                <div><img src="./images/kxd_wx.jpg" alt=""></div>
+                <div>
+                    <p>版权所有 © 无锡开鑫网络借贷信息中介有限公司</p>
+                    <p>Copyright © 2016-2019 Wuxi Kaixin Peer-to-Peer lending information</p>
+                    <p>intermediary Co., Ltd. All Rights Reserved</p>
+                    <p><a href="#">苏ICP备18024778号-1</a></p>
+                    <p><a href="#"><img src="./images/sgwab.png" alt="">苏公网安备 32021102000767号</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="container">
+                <ul>
+                    <li>友情链接 :</li>
+                    <li><a href="#">江苏省地方金融监督管理局</a></li>
+                    <li><a href="#">中国互联网金融协会</a></li>
+                    <li><a href="#">江苏省信用再担保</a></li>
+                    <li><a href="#">江苏信托</a></li>
+                    <li><a href="#">开鑫金服</a></li>
+                    <li><a href="#">民生银行</a></li>
+                    <li><a href="#">国开金融</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 引入jq -->
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <!-- 引入bootstrap的poper -->
+    <script src="./lib/popper/umd/popper.min.js"></script>
+    <!-- 引入bootstrap的js -->
+    <script src="./lib/bootstrap4/js/bootstrap.min.js"></script>
+    <!-- 引入当前js -->
+    <script src="./js/index.js"></script>
 </body>
+
 </html>
