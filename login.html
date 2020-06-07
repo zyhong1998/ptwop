@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录</title>
+    <!-- 引入重置样式 -->
+    <link rel="stylesheet" href="./dist/css/reset.min.css">
+    <!-- 引入公共样式 -->
+    <link rel="stylesheet" href="./dist/css/common.min.css">
+    <!-- 引入bootstrap的css -->
+    <link rel="stylesheet" href="./lib/bootstrap4/css/bootstrap.min.css">
+    <!-- 引入当前页面css -->
+    <link rel="stylesheet" href="./dist/css/login.min.css">
+</head>
+<body>
+    <!-- 内容区-顶部 -->
+    <main class="main main-top">
+        <div class="top container">
+            <div class="logo">
+                <a href="#"><img src="/images/logo_kxd.png" alt=""></a>
+                <a href="#"><img src="/images/kxd-slogan.png" alt=""></a>
+            </div>
+            <div class="top-nav">
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#">我要出借</a></li>
+                    <li><a href="#">我要借款</a></li>
+                    <li><a href="#">信息披露</a></li>
+                    <li class="user"><a href="#"><span class="icon"></span> 我的账户</a></li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    <div class="poster">
+        <img src="./images/bg043.jpg" alt=""> 
+        <form>
+            <div >
+                <h4>会员登录</h4>
+                <span><a href="#" style="color: #c69b5f !important;">立即注册</a></span>
+            </div>
+            <div class="form-group">
+                <label class="icon"></label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="用户名">
+              <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+            </div>
+            <div class="form-group">
+                <label class="icon"></label>
+              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="密码">
+            </div>
+            <div class="form-group">
+                <label class="icon"></label>
+              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="输入验证码">
+              <div></div>
+            </div>
+            <div class="form-group form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">我已同意并阅读 <a href="#">《开鑫贷会员服务协议及隐私权政策》</a></label>
+            </div>
+            <button type="submit" class="btn btn-primary">立即登录</button>
+            <div>
+                <p>密码连续输错5次，账户会被锁定，次日解锁 &nbsp;<a href="#"> 忘记密码?</a></p>
+            </div>
+          </form>
+        
+    </div>
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="top">
+            <div class="container">
+                <div>
+                    <p>服务电话</p>
+                    <p class="tel">400-621-6021</p>
+                    <p>人工服务时间</p>
+                    <p>法定工作日9:00-22:00</p>
+                    <p>周六 周日9:00-18:00</p>
+                </div>
+                <div></div>
+                <div>
+                    <p>版权所有 © 无锡开鑫网络借贷信息中介有限公司</p>
+                    <p>Copyright © 2016-2019 Wuxi Kaixin Peer-to-Peer lending information</p>
+                    <p>intermediary Co., Ltd. All Rights Reserved</p>
+                    <p><a href="#">苏ICP备18024778号-1</a></p>
+                    <p><a href="#"><img src="./images/sgwab.png" alt="">苏公网安备 32021102000767号</a></p>
+                </div>
+            </div>
+        </div>
+       
+    </footer>
+    <!-- 引入jq -->
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <!-- 引入bootstrap的poper -->
+    <script src="./lib/popper/umd/popper.min.js"></script>
+    <!-- 引入bootstrap的js -->
+    <script src="./lib/bootstrap4/js/bootstrap.min.js"></script>
+    <!-- 引入当前js -->
+    <script src="./dist/js/login.min.js"></script>
+</body>
+</html>
