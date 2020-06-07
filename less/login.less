@@ -1,0 +1,104 @@
+@import "./var.less";
+@import "./fn.less";
+.poster{
+    position: relative;
+    min-width: 1200px;
+    img{
+        width: 100%;        
+        height: 450px;
+    }
+    form{
+        position: absolute;
+        top: 23px;
+        right: 220px;
+        background-color: #fff;
+        width: 400px;
+        
+        border-radius: 2px;
+        h4{
+            display: inline-block;
+            margin-right: 180px;
+        }
+        >div{
+            margin: 20px;
+        }
+        .form-group{
+            margin-top: 20px;
+            position: relative;
+            .icon{
+                display: inline-block;
+                width: 24px;
+                height: 24px;
+                position: absolute;
+                top: 6px;
+                left: 6px;
+                background:url(/images/input-valid.png) no-repeat;
+                background-position: 0px -90px;
+            }
+            input{
+                text-indent: 30px;
+            }
+        }
+        div:nth-child(3){
+            .icon{
+                background-position: 0px -114px;
+            }
+        }
+        div:nth-child(4){
+            display: flex;
+            justify-content: space-between;
+            input{
+                width: 260px;
+            }
+            .icon{
+                background-position: 0px -138px;
+            }
+            div{
+                width: 100px;
+                height: 38px;
+                background-color: red;
+            }
+        }
+        div:nth-child(5){
+            font-size: 12px;
+            .form-check-label{
+                vertical-align: -2px;
+            }
+            a{
+                color: #2a6496 !important;
+            }
+        }
+        button{
+            width: 360px;
+            height: 46px;
+            background-color: #c69b5f;
+            border: none;
+            font-size: 18px;
+            letter-spacing: 2px;
+            margin:  0 20px;
+            &:hover{
+                background-color:rgb(179, 115, 44) ;
+            }
+        }
+        div:nth-child(7){
+            width: 400px;
+            border-top: 1px solid #ccc;
+            font-size: 12px;
+            margin: 20px 0;
+            p{
+                margin: 10px 20px;
+                
+            }
+            a{
+                color: #2a6496 !important;
+            }
+        }
+    }
+}
+// 页脚
+.footer .top{
+    background-color: #fff;
+    p{
+        color: #999;
+    }
+}
