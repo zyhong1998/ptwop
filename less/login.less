@@ -1,104 +1,151 @@
 @import "./var.less";
 @import "./fn.less";
-.poster{
+
+.poster {
     position: relative;
     min-width: 1200px;
-    img{
-        width: 100%;        
+
+    img {
+        width: 100%;
         height: 450px;
     }
-    form{
+
+    form {
         position: absolute;
         top: 23px;
         right: 220px;
         background-color: #fff;
         width: 400px;
-        
+
         border-radius: 2px;
-        h4{
+
+        h4 {
             display: inline-block;
             margin-right: 180px;
         }
-        >div{
+
+        >div {
             margin: 20px;
         }
-        .form-group{
+
+        .form-group {
             margin-top: 20px;
             position: relative;
-            .icon{
+
+            .icon {
                 display: inline-block;
                 width: 24px;
                 height: 24px;
                 position: absolute;
                 top: 6px;
                 left: 6px;
-                background:url(/images/input-valid.png) no-repeat;
+                background: url(/images/input-valid.png) no-repeat;
                 background-position: 0px -90px;
             }
-            input{
+
+            input {
                 text-indent: 30px;
             }
         }
-        div:nth-child(3){
-            .icon{
+
+        >div:nth-child(3) {
+            .icon {
                 background-position: 0px -114px;
             }
         }
-        div:nth-child(4){
+
+        >div:nth-child(4) {
             display: flex;
             justify-content: space-between;
-            input{
-                width: 260px;
+
+            input {
+                width: 280px;
             }
-            .icon{
+
+            .icon {
                 background-position: 0px -138px;
             }
-            div{
-                width: 100px;
-                height: 38px;
-                background-color: red;
+
+            >p {
+                margin-bottom: 0;
+                img{
+                    width: 100px;
+                    height: 40px !important;
+                }
             }
+            .code {
+                display: inline-block;
+                vertical-align: middle;
+                width: 65px;
+                height: 30px;
+                line-height: 30px;
+                letter-spacing: 4px;
+                text-align: center;
+                background: #4f61407d;
+            }
+            #randomCode{
+                display: inline-block;
+                width: 100px;
+                height: 38px !important;
+                cursor: pointer;
+                line-height: 38px;
+                user-select: none;
+            }
+            
         }
-        div:nth-child(5){
+
+        div:nth-child(5) {
             font-size: 12px;
-            .form-check-label{
+            >div{
+                margin-left: 20px;
+            }
+            .form-check-label {
                 vertical-align: -2px;
             }
-            a{
+
+            a {
                 color: #2a6496 !important;
             }
+            width: 400px;
+            border-top: 1px solid #ccc;
+            font-size: 12px;
+            margin: 20px 0;
+
+            p {
+                margin: 10px 20px;
+
+            }
         }
-        button{
+
+        button {
             width: 360px;
             height: 46px;
             background-color: #c69b5f;
             border: none;
             font-size: 18px;
             letter-spacing: 2px;
-            margin:  0 20px;
-            &:hover{
-                background-color:rgb(179, 115, 44) ;
+            margin: 0 20px;
+
+            &:hover {
+                background-color: rgb(179, 115, 44);
             }
         }
         div:nth-child(7){
-            width: 400px;
-            border-top: 1px solid #ccc;
             font-size: 12px;
-            margin: 20px 0;
-            p{
-                margin: 10px 20px;
-                
-            }
-            a{
+            a {
                 color: #2a6496 !important;
             }
         }
+        
     }
 }
+
+
 // 页脚
-.footer .top{
+.footer .top {
     background-color: #fff;
-    p{
+    margin: 0;
+    p {
         color: #999;
     }
 }

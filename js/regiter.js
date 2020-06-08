@@ -1,6 +1,6 @@
 // 文档加载事件
 window.onload = function () {
-    var validateCode = getId("verify");
+    var validateCode = getId("inputPassword");
     var randomCode = getId("randomCode");
     var errorInfo = getId("errorInfo");
     var confirm = getId("confirm");
@@ -37,7 +37,6 @@ window.onload = function () {
 function getId(id) {
     return document.getElementById(id);
 }
-
 function generateRandomCode() {
     // 用于盛放随机数码的空数组
     var result = [];

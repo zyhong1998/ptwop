@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>登录</title>
+    <title>我要借款</title>
     <link rel="icon" href="./images/favicon.ico" sizes="16x16">
     <!-- 引入重置样式 -->
     <link rel="stylesheet" href="./dist/css/reset.min.css">
@@ -13,9 +12,8 @@
     <!-- 引入bootstrap的css -->
     <link rel="stylesheet" href="./lib/bootstrap4/css/bootstrap.min.css">
     <!-- 引入当前页面css -->
-    <link rel="stylesheet" href="./dist/css/login.min.css">
+    <link rel="stylesheet" href="./dist/css/borrow.min.css">
 </head>
-
 <body>
     <!-- 内容区-顶部 -->
     <main class="main main-top">
@@ -26,56 +24,58 @@
             </div>
             <div class="top-nav">
                 <ul>
-                    <li><a href="./index.html" class="active">首页</a></li>
+                    <li><a href="./index.html" >首页</a></li>
                     <li><a href="./pay.html">我要出借</a></li>
-                    <li><a href="./borrow.html">我要借款</a></li>
-                    <li><a href="./personal.html">个人中心</a></li>
+                    <li><a href="./borrow.html" class="active">我要借款</a></li>
+                    <li><a href="./personal.html" >个人中心</a></li>
                     <li class="user"><a href="#"><span class="icon"></span> 我的账户</a></li>
                 </ul>
             </div>
         </div>
     </main>
-    <!-- 登陆面板 -->
-    <div class="poster">
-        <img src="./images/bg043.jpg" alt="">
-        <form>
+    <div class="container content">
+        <div>
+            <h4>信用贷</h4>
             <div>
-                <h4>会员登录</h4>
-                <span><a href="./regiter.html" style="color: #c69b5f !important;">立即注册</a></span>
+                <p>可借金额<i>￥2,000.00</i></p>
+                <p><a href="#">申请条件</a></p>
+                <p>仅限成都地区</p>
+                <p><img src="./images/sequare.png" alt=""> 填写基本资料</p>
+                <p><img src="./images/sequare.png" alt=""> 身份认证</p>
+                <p><img src="./images/sequare.png" alt=""> 视频认证</p>
             </div>
-            <div class="form-group">
-                <label class="icon"></label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                    placeholder="用户名">
-                <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+            <div title="点击申请">
+                <a href="#" >立刻申请</a>
             </div>
-            <div class="form-group">
-                <label class="icon"></label>
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="密码">
-            </div>
-            <div class="form-group">
-                <label class="icon"></label>
-                <input type="password" class="form-control" id="verify" placeholder="输入验证码" aria-label="Username" aria-describedby="basic-addon1">
-                
-                        <span class="code" id="randomCode" title="点击切换验证码"></span>
-                        <span class="refresh" id="refresh"></span>
-                        <br>
-                        <span class="wrong-info" id="errorInfo"></span>
-                        <br>
-                  
-            </div>
-            <div class="form-group form-check">
-                <div>
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1">我已同意并阅读 <a href="#">《开鑫贷会员服务协议及隐私权政策》</a></label>
-                </div>
-            </div>
-            <button type="submit" class="btn btn-primary">立即登录</button>
+        </div>
+        <div>
+            <h4>车易贷</h4>
             <div>
-                <p>密码连续输错5次，账户会被锁定，次日解锁 &nbsp;<a href="#"> 忘记密码?</a></p>
+                <p>可借金额<i>￥2,000.00</i></p>
+                <p><a href="#">申请条件</a></p>
+                <p>仅限成都地区</p>
+                <p><img src="./images/sequare.png" alt=""> 填写基本资料</p>
+                <p><img src="./images/sequare.png" alt=""> 身份认证</p>
+                <p><img src="./images/sequare.png" alt=""> 视频认证</p>
             </div>
-        </form>
-
+            <div title="点击申请">
+                <a href="#" >立刻申请</a>
+            </div>
+        </div>
+        <div>
+            <h4>房易贷</h4>
+            <div>
+                <p>可借金额<i>￥12,000.00</i></p>
+                <p><a href="#">申请条件</a></p>
+                <p>仅限成都地区</p>
+                <p><img src="./images/sequare.png" alt=""> 填写基本资料</p>
+                <p><img src="./images/sequare.png" alt=""> 身份认证</p>
+                <p><img src="./images/sequare.png" alt=""> 视频认证</p>
+            </div>
+            <div title="点击申请">
+                <a href="#" >立刻申请</a>
+            </div>
+        </div>
     </div>
     <!-- 页脚 -->
     <footer class="footer">
@@ -107,7 +107,7 @@
     <!-- 引入bootstrap的js -->
     <script src="./lib/bootstrap4/js/bootstrap.min.js"></script>
     <!-- 引入当前js -->
-    <script src="./dist/js/login.min.js"></script>
+    <script src="./dist/js/borrow.min.js"></script>
+    
 </body>
-
 </html>
