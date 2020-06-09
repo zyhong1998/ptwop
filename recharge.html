@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>充值中心</title>
+    <link rel="icon" href="./images/favicon.ico" sizes="16x16">
+    <!-- 引入重置样式 -->
+    <link rel="stylesheet" href="./dist/css/reset.min.css">
+    <!-- 引入公共样式 -->
+    <link rel="stylesheet" href="./dist/css/common.min.css">
+    <!-- 引入bootstrap的css -->
+    <link rel="stylesheet" href="./lib/bootstrap4/css/bootstrap.min.css">
+    <!-- 引入当前页面css -->
+    <link rel="stylesheet" href="./dist/css/recharge.min.css">
+</head>
+
+<body>
+    <!-- 头部 -->
+    <header class="header">
+        <div class=" container">
+            <ul>
+                <li>
+                    <span class="icon-tel1">
+                    </span>
+                    服务电话:<span class="tel">400-621-6021</span>
+                </li>
+                <li>
+                    <a href="#">
+                        下载客户端
+                    </a>
+                    <span class="icon-tel2">
+
+                    </span>
+                </li>
+            </ul>
+            <ul class="nav-right">
+                <li>
+                    <a href="#">前往开鑫金服</a>
+                </li>
+                <li>
+                    <a href="#">
+                        站点地图
+                    </a>
+                </li>
+                <li>
+                    <a href="#">关于我们</a>
+                </li>
+                <li>
+                    <a href="#">充值中心</a>
+                </li>
+                <li>
+                    <a href="./login.html">
+                        立即登录
+                    </a>
+                </li>
+                <li>
+                    <a href="./regiter.html">免费注册</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <!-- 内容区-顶部 -->
+    <main class="main main-top">
+        <div class="top container">
+            <div class="logo ">
+                <a href="#"><img src="/images/logo_kxd.png" alt=""></a>
+                <a href="#"><img src="/images/kxd-slogan.png" alt=""></a>
+
+            </div>
+            <div class="top-nav">
+                <ul>
+                    <li><a href="./index.html">首页</a></li>
+                    <li><a href="./personal.html" class="active">账户充值</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </main>
+    <!-- 主内容 -->
+    <div class="container">
+        <div class="content-bd">
+            <div class="alert alert-warning" role="alert">
+                <h3>账户充值</h3>
+                <p>1. 由于银行系统的限制，充值功能建议使用 IE 内核（IE8及以上）的浏览器。</p>
+                <p>2. 请注意：为打击信用卡套现行为，充值资金必须经过投资回款后方能允许提现。</p>
+            </div>
+            <div>
+                <h4>线下充值</h4>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">银行名称</th>
+                            <th scope="col">开户人姓名</th>
+                            <th scope="col">银行帐号</th>
+                            <th scope="col">开户行支行名称</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row"></th>
+                            <td>源代码</td>
+                            <td>62170038233428412750</td>
+                            <td>府城大道支行</td>
+                        </tr>
+                        <tr>
+                            <th scope="row"></th>
+                            <td>源代码</td>
+                            <td>6217003834411112750</td>
+                            <td>成都天府新谷支行</td>
+                        </tr>
+                        <tr>
+                            <th scope="row"></th>
+                            <td>源代码</td>
+                            <td>6212303810028412750</td>
+                            <td>成都高新天府大道支行</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="content">
+                    <h5>第一步:</h5>
+                    <p>请选择往以上一个账号汇款或转账您所要充值的金额（若您是跨行转账，推荐选择建行）。注：请保存您的交易记录信息。</p>
+                    <h5>第二步:</h5>
+                    <p>款或转账成功后，再选择你所汇款或转账的账号，并填写以下完整的信息后，提交您的线下充值申请。我们将会在下个工作日核对您的申请。</p>
+                </div>
+                <div>
+                    <form>
+                        <div class="form-group row">
+                            <label for="inputPassword" class="col-sm-2 col-form-label">银 &emsp;行</label>
+                            <select class="form-control select" style="width: 480px;" name="bankInfo.id">
+    
+                                <option value="1">工商银行62170038233428412750(府城大道支行)</option>
+    
+                                <option value="2">农业银行6217003834411112750(成都天府新谷支行)</option>
+    
+                                <option value="3">招商银行6212303810028412750(成都高新天府大道支行)</option>
+    
+                            </select>
+                        </div>
+                        <div class="form-group row">
+                            <label for="inputPassword" class="col-sm-2 col-form-label">交 易 号</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="inputPassword">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="inputPassword" class="col-sm-2 col-form-label">充值时间</label>
+                            <div class="col-sm-10">
+                                <input type="datetime-local" class="form-control" id="inputPassword">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="inputPassword" class="col-sm-2 col-form-label">充值金额</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="inputPassword">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="inputPassword" class="col-sm-2 col-form-label">说 &emsp;明</label>
+                            <div class="col-sm-10">
+                                <textarea name="" id="" class="textarea"></textarea>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-primary">确认提交</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="top">
+            <div class="container">
+                <div>
+                    <p>服务电话</p>
+                    <p class="tel">400-621-6021</p>
+                    <p>人工服务时间</p>
+                    <p>法定工作日9:00-22:00</p>
+                    <p>周六 周日9:00-18:00</p>
+                </div>
+                <div></div>
+                <div>
+                    <p>版权所有 © 无锡开鑫网络借贷信息中介有限公司</p>
+                    <p>Copyright © 2016-2019 Wuxi Kaixin Peer-to-Peer lending information</p>
+                    <p>intermediary Co., Ltd. All Rights Reserved</p>
+                    <p><a href="#">苏ICP备18024778号-1</a></p>
+                    <p><a href="#"><img src="./images/sgwab.png" alt="">苏公网安备 32021102000767号</a></p>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+    <!-- 引入jq -->
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <!-- 引入bootstrap的poper -->
+    <script src="./lib/popper/umd/popper.min.js"></script>
+    <!-- 引入bootstrap的js -->
+    <script src="./lib/bootstrap4/js/bootstrap.min.js"></script>
+    <!-- 引入当前js -->
+    <!-- <script src="./dist/js/login.min.js"></script> -->
+</body>
+
+</html>
