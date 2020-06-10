@@ -52,6 +52,61 @@ function generateRandomCode() {
 
 }
 
+$('.col-sm-10 .user').blur(function () {
+    // 获取输入值
+    var userVal = $(this).val()
+    var that = $(this)
+    // console.log(userVal);
+    
+    if (userVal) {//有值
+        // js正则表达式验证
+        if (/^[a-zA-Z0-9_-]{4,16}$/.test(userVal)) {
+            console.log(1);
+            // 合法时
+            that.css({'border':'1px solid green'}).addClass('error')
+            // 向后台发送数据验证是否重复
+            // $.ajax({
+            //     url: "http://139.9.177.51:3333/api/emailExist",
+            //     type: "post",
+            //     data: "email=" + emailVal,
+            //     success: function (yes) {
+            //         if (yes.code == 200) {//不重复
+            //             // console.log(1);
+            //             that.css({ 'border': '1px solid green' }).next().removeClass('erorr').css({ 'color': 'green' }).text('邮箱没被注册，可以使用')
+            //             emailFlag = true
+            //         } else {//重复
+            //             // 推荐邮箱
+            //             // 获取@号所在位置
+            //             var index = emailVal.lastIndexOf('@')
+            //             //获取@号之前的字符
+            //             var val2 = emailVal.slice(0, index)
+            //             // 获取@符号之后的字符
+            //             var val3 = emailVal.slice(index)
+            //             // console.log(val3);                                
+            //             // 生成随机数
+            //             var rand = Math.floor(Math.random () * 900) + 100;
+            //             // 拼接@号前的字符串和随机数
+            //             val2 = val2+rand
+            //             // console.log(val2);
+            //             $('#exampleInputEmail1').css({ 'border': '1px solid red' }).next().removeClass('erorr').css({ 'color': 'red' }).text('邮箱已被注册，请换一个如：' + val2 + val3)
+            //             emailFlag = false
+            //         }
+            //     }
+            // })
+        } else {
+            // 不合法时
+            // console.log(2);
+            that.css({ 'border': '1px solid red' }).removeClass('error').next().css('color','red').text('用户名不合法，重新输入')
+            // emailFlag = false
+            // return false
+        }
+    } else {//没值
+        $('#title').removeClass('error')
+        that.css({ 'border': '1px solid red' ,}).next().css('color','red').text('请输入用户名')
+        // emailFlag = false
+    }
+})
+
 };
 
 

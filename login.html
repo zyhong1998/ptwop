@@ -38,39 +38,36 @@
     <!-- 登陆面板 -->
     <div class="poster">
         <img src="./images/bg043.jpg" alt="">
-        <form>
+        <form id="myform">
             <div>
                 <h4>会员登录</h4>
                 <span><a href="./regiter.html" style="color: #c69b5f !important;">立即注册</a></span>
             </div>
             <div class="form-group">
                 <label class="icon"></label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                    placeholder="用户名">
-                <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                <input type="email" class="form-control" id="username" aria-describedby="emailHelp"
+                    placeholder="用户名" autofocus>
             </div>
             <div class="form-group">
                 <label class="icon"></label>
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="密码">
+                <input type="password" class="form-control" id="pwd" placeholder="密码">
             </div>
             <div class="form-group">
                 <label class="icon"></label>
-                <input type="password" class="form-control" id="verify" placeholder="输入验证码" aria-label="Username" aria-describedby="basic-addon1">
-                
+                <input type="text" class="form-control" id="verify" placeholder="输入验证码" aria-label="Username" aria-describedby="basic-addon1" autocomplete="off">                
                         <span class="code" id="randomCode" title="点击切换验证码"></span>
                         <span class="refresh" id="refresh"></span>
                         <br>
                         <span class="wrong-info" id="errorInfo"></span>
-                        <br>
-                  
+                        <br>                  
             </div>
             <div class="form-group form-check">
                 <div>
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1" checked>
                 <label class="form-check-label" for="exampleCheck1">我已同意并阅读 <a href="#">《开鑫贷会员服务协议及隐私权政策》</a></label>
                 </div>
             </div>
-            <button type="submit" class="btn btn-primary">立即登录</button>
+            <button type="button" class="btn btn-primary" id="loginBtn">立即登录</button>
             <div>
                 <p>密码连续输错5次，账户会被锁定，次日解锁 &nbsp;<a href="#"> 忘记密码?</a></p>
             </div>
