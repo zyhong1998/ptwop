@@ -32,7 +32,14 @@ $(function () {
                 $("#main").load("../../pages/pay.html");
                 break;
             case "#personal":
-                $("#main").load("../../pages/personal.html");
+                loadPersonalPage('#personal/getuserinfo')
+                break;
+            case "#personal/getuserinfo":
+                loadPersonalPage(hash)
+
+                break;
+            case "#personal/updateuser":
+                loadPersonalPage(hash)
                 break;
             case "#borrow":
                 $("#main").load("../../pages/borrow.html");
@@ -43,9 +50,34 @@ $(function () {
         // 调用
         navActive(hash)
     }
+    // 封装函数 加载个人中心二级页面
+    function loadPersonalPage(hash) {
+        hash=hash.substr(1);
+        // console.log(hash);  
+        // console.log($("#perContent").length);
+              
+        if ($("#perContent").length) {//点击
+            $("#perContent").load("../../pages/" + hash + ".html");
+            activePersonal(hash)
+        } else {//刷新
+            $("#main").load("../../pages/personal.html", function () {
+                $("#perContent").load("../../pages/" + hash + ".html");
+                activePersonal(hash)
+            });            
+        }
+    }
+    // 个人中心二级路由激活样式
+    function activePersonal(hash){
+        $('.leftActive a').removeClass('active')
+        $(".leftActive a[href='#" + hash + "']").addClass('active')
+    }
+
     // 激活样式
     function navActive(hash) {
         // 点击增加当前激活样式，删除其他激活样式
+        if( hash =='' ) hash="#home";
+        if( hash.includes('personal')) hash="#personal";
+
         $(".main-top .nav-active a[href='" + hash + "']").addClass('active').closest('li').siblings().find('a').removeClass("active")
     }
 
@@ -58,7 +90,7 @@ $(function () {
         // 判断
         if (username && uid) {
             // 有值时为登录
-            $('#login').html('<a href="#">'+username+'</a>')
+            $('#login').html('<a href="#">' + username + '</a>')
             $('#reg').html('<a href="#" id="loginOut">注销</a>')
         } else {
             // 不是登录
@@ -67,8 +99,8 @@ $(function () {
         }
     }
     // 点击注销按钮，清空本地用户名和用户id
-    $('#reg').on('click','#loginOut',function(){
-        if(confirm('你确定退出吗？')){
+    $('#reg').on('click', '#loginOut', function () {
+        if (confirm('你确定退出吗？')) {
             // 删除本地数据
             localStorage.removeItem('username')
             localStorage.removeItem('uid')

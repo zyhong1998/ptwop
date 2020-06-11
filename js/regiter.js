@@ -1,112 +1,211 @@
 // 文档加载事件
-window.onload = function () {
-    var validateCode = getId("inputPassword");
-    var randomCode = getId("randomCode");
-    var errorInfo = getId("errorInfo");
-    var confirm = getId("confirm");
-    randomCode.innerHTML = generateRandomCode();
-    // 点击refresh按钮,重置验证码
-    refresh.onclick = function () {
-        randomCode.innerHTML = generateRandomCode();
-    };
-    // 进行验证
-    randomCode.onclick = function () {
-        var val = validateCode.value;
-        errorInfo.style.display = 'block';
-        if (val) {
-            if (val !== randomCode.innerHTML) {
-                errorInfo.innerHTML = '验证码有误，请重新输入！';
-                randomCode.innerHTML = generateRandomCode();
-            } else {
-                errorInfo.style.display = "none";
-                setTimeout(function () {
-                    alert("验证成功");
-                }, 80);
+$(function () {
+    // 定义变量保存id
+    var $username = $('#username')
+    var $pwd = $('#pwd')
+    var $email = $('#email')
+    var $nickname = $('#nickname')
+    // 定义标杆
+    var uFlag = false;
+    var pFlag = false;
+    var eFlag = false;
+    var nFlag = false;
+    // 用户名验证
+    $username.blur(function () {
+        // 获取输入值
+        var uVal = $(this).val()
+        // var that = $('this')
+        // 用户名验证
+        if (uVal) {
+            // 不为空时
+            // 验证合法性 用户名正则，4到16位（字母，数字，下划线，减号）
+            if (/^[a-zA-Z]\w{2,11}$/.test(uVal)) {
+                // 合法
+                // console.log('hefa');
+                $(this).css({ 'border': '1px solid green' }).next().addClass('error')
+                // 发送ajax验证用户名重复  
+                $.ajax({
+                    url: "http://127.0.0.1:8848/accrepeat.php?username=hhha",
+                    type: "GET",
+                    data: "username=" + uVal,
+                    success: function (yes) {
 
+                        if (yes == "fail") {//重复
+                            // console.log(yes);
+                            // 生成三位随机数,(max-min)+min
+                            var num = Math.floor((Math.random() * 899) + 100)
+                            // console.log(num);
+                            // 更改样式                            
+                            // usernameErr('用户名重复：' + uVal + num)
+                            titleErr($username, '用户名重复：' + uVal + num)
+
+                            uFlag = false
+                        } else {//未重复
+                            titleYes($username)
+                            uFlag = true
+                        }
+
+                    },
+                    error: function (no) {
+                    }
+                })
+            } else {
+                // 不合法                
+                // usernameErr('用户名不合法')
+                titleErr($username, '用户名不合法')
+                uFlag = false
             }
         } else {
-
-            errorInfo.innerHTML = '';
-            randomCode.innerHTML = generateRandomCode();
+            // 为空时            
+            titleErr($username, '用户名不能为空')
+            uFlag = false
         }
-    };
-    /**
- * 根据元素获取id
- * @param {String} id 需要获取的元素的id
- */
-function getId(id) {
-    return document.getElementById(id);
-}
-function generateRandomCode() {
-    // 用于盛放随机数码的空数组
-    var result = [];
-    // 长度为62的数码数组
-    var arr = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
-    for (var i = 0; i < 4; i++) {
-        // 用于随机获取arr中的元素，产生[0,62]之间的随机整数
-        var num = Math.floor(Math.random() * 62);
-        result.push(arr[num]);
-    }
-    // console.log(result);
-    return result.join('')    
+    })
+    // // 封装验证函数
+    // function regFn(name, reg, flag, title1, title2) {
+    //     name.blur(function () {
+    //         // 获取输入值
+    //         var nVal = name.val()
+    //         if (nVal) {//有值
+    //             if (reg.test(nVal)) {//合法
+    //                 // console.log(1);      
+    //                 titleYes(name)
+    //                 flag = true
+    //                 // console.log(flag);
 
-}
+    //             } else {//不合法
+    //                 // console.log(2);
+    //                 titleErr(name, title2)
+    //                 flag = true
+    //             }
+    //         } else {//没有值
+    //             titleErr(name, title1)
+    //             flag = true
+    //         }
+    //     })
 
-$('.col-sm-10 .user').blur(function () {
-    // 获取输入值
-    var userVal = $(this).val()
-    var that = $(this)
-    // console.log(userVal);
-    
-    if (userVal) {//有值
-        // js正则表达式验证
-        if (/^[a-zA-Z0-9_-]{4,16}$/.test(userVal)) {
-            console.log(1);
-            // 合法时
-            that.css({'border':'1px solid green'}).addClass('error')
-            // 向后台发送数据验证是否重复
-            // $.ajax({
-            //     url: "http://139.9.177.51:3333/api/emailExist",
-            //     type: "post",
-            //     data: "email=" + emailVal,
-            //     success: function (yes) {
-            //         if (yes.code == 200) {//不重复
-            //             // console.log(1);
-            //             that.css({ 'border': '1px solid green' }).next().removeClass('erorr').css({ 'color': 'green' }).text('邮箱没被注册，可以使用')
-            //             emailFlag = true
-            //         } else {//重复
-            //             // 推荐邮箱
-            //             // 获取@号所在位置
-            //             var index = emailVal.lastIndexOf('@')
-            //             //获取@号之前的字符
-            //             var val2 = emailVal.slice(0, index)
-            //             // 获取@符号之后的字符
-            //             var val3 = emailVal.slice(index)
-            //             // console.log(val3);                                
-            //             // 生成随机数
-            //             var rand = Math.floor(Math.random () * 900) + 100;
-            //             // 拼接@号前的字符串和随机数
-            //             val2 = val2+rand
-            //             // console.log(val2);
-            //             $('#exampleInputEmail1').css({ 'border': '1px solid red' }).next().removeClass('erorr').css({ 'color': 'red' }).text('邮箱已被注册，请换一个如：' + val2 + val3)
-            //             emailFlag = false
-            //         }
-            //     }
-            // })
-        } else {
-            // 不合法时
-            // console.log(2);
-            that.css({ 'border': '1px solid red' }).removeClass('error').next().css('color','red').text('用户名不合法，重新输入')
-            // emailFlag = false
-            // return false
+    // }
+
+    // function regFn(name, reg, flag, title1, title2) {
+    //     var nVal = name.val()
+    //     if (nVal) {//有值
+    //         if (reg.test(nVal)) {//合法
+    //             // console.log(1);      
+    //             titleYes(name)
+    //             flag = true
+    //             // console.log(flag);
+    //         } else {//不合法
+    //             // console.log(2);
+    //             titleErr(name, title2)
+    //             flag = true
+    //         }
+    //     } else {//没有值
+    //         titleErr(name, title1)
+    //         flag = true
+    //     }
+    // }
+    // $pwd.blur(function(){
+    //     regFn($pwd, /^\w{4,12}$/, pflag, '请输入昵称', '请输入合法昵称')
+    // })
+    // 密码
+    $pwd.blur(function () {
+        // regFn($nickname, /^[a-zA-Z]\w{2,11}$/, nFlag, '请输入昵称', '请输入合法昵称')
+        var pVal = $pwd.val()
+        if (pVal) {//有值
+            if (/^\w{4,12}$/.test(pVal)) {//合法   
+                titleYes($pwd)
+                pFlag = true
+                // console.log(flag);
+            } else {//不合法
+                titleErr($pwd, '请输入合法密码')
+                pFlag = false
+            }
+        } else {//没有值
+            titleErr($pwd, '请输入密码')
+            pFlag = false
         }
-    } else {//没值
-        $('#title').removeClass('error')
-        that.css({ 'border': '1px solid red' ,}).next().css('color','red').text('请输入用户名')
-        // emailFlag = false
+    })
+    // 邮箱
+    $email.blur(function () {
+        // regFn($nickname, /^[a-zA-Z]\w{2,11}$/, nFlag, '请输入昵称', '请输入合法昵称')
+        var eVal = $email.val()
+        if (eVal) {//有值
+            if (/^([a-zA-Z]|[0-9])(\w|\-)+@[a-zA-Z0-9]+\.([a-zA-Z]{2,4})$/.test(eVal)) {//合法    
+                titleYes($email)
+                eFlag = true
+            } else {//不合法
+                // console.log(2);
+                titleErr($email, '请输入合法邮箱')
+                eFlag = false
+            }
+        } else {//没有值
+            titleErr($email, '请输入邮箱')
+            eFlag = false
+        }
+    })
+    // 昵称
+    $nickname.blur(function () {
+        var nVal = $nickname.val()
+        if (nVal) {//有值
+            if (/^[a-zA-Z]\w{2,11}$/.test(nVal)) {//合法
+                titleYes($nickname)
+                nFlag = true
+            } else {//不合法
+                titleErr($nickname, '请输入合法昵称')
+                nFlag = false
+            }
+        } else {//没有值
+            titleErr($nickname, '请输入昵称')
+            nFlag = false
+        }
+    })
+    // 封装验证失败后的提示信息
+    function titleErr(name, title) {
+        name.css({ 'border': '1px solid red' }).next().removeClass('error').text(title).css({ 'color': 'red' })
     }
+    // 封装验证成功后的提示信息
+    function titleYes(name) {
+        name.css({ 'border': '1px solid green' }).next().addClass('error')
+    }
+    // 点击注册按钮
+    $('#regBtn').click(function () {
+        // 判断是否勾选用户协议
+        var exampleCheck1 = $('#exampleCheck1').prop("checked");//获取值
+        if (exampleCheck1 == false) {//未勾选
+            alert('你未勾选用户协议')
+            return false
+        } else {//勾选
+            // 判断标杆            
+            if (uFlag && pFlag && eFlag && nFlag) {//都为true时
+                console.log(11);
+                // return false
+                // 向后台发送ajax验证
+                $.ajax({
+                    url: "http://127.0.0.1:8848/reg.php",
+                    type: "POST",
+                    data: {
+                        username: $username.val(),
+                        pwd: $pwd.val(),
+                        email: $email.val(),
+                        nickname: $nickname.val()
+                    },
+                    success: function (yes) {
+                        // 判断是否成功
+                        if (yes == 'ok') {//成功
+                            alert("恭喜您！" + $username.val());
+                            location.href = "./login.html";
+                        } else {//失败
+                            alert('注册失败，请稍后重试')
+                        }
+                    }
+                })
+            } else {//有一个不为true时
+                return false
+                // console.log(2);
+            }
+
+        }
+    })
+
 })
-
-};
-
 
