@@ -41,6 +41,9 @@ $(function () {
             case "#personal/updateuser":
                 loadPersonalPage(hash)
                 break;
+            case "#personal/borrow_apply":
+                loadPersonalPage(hash)
+                break;
             case "#borrow":
                 $("#main").load("../../pages/borrow.html");
                 break;
@@ -52,10 +55,10 @@ $(function () {
     }
     // 封装函数 加载个人中心二级页面
     function loadPersonalPage(hash) {
-        hash=hash.substr(1);
+        hash = hash.substr(1);
         // console.log(hash);  
         // console.log($("#perContent").length);
-              
+
         if ($("#perContent").length) {//点击
             $("#perContent").load("../../pages/" + hash + ".html");
             activePersonal(hash)
@@ -63,11 +66,11 @@ $(function () {
             $("#main").load("../../pages/personal.html", function () {
                 $("#perContent").load("../../pages/" + hash + ".html");
                 activePersonal(hash)
-            });            
+            });
         }
     }
     // 个人中心二级路由激活样式
-    function activePersonal(hash){
+    function activePersonal(hash) {
         $('.leftActive a').removeClass('active')
         $(".leftActive a[href='#" + hash + "']").addClass('active')
     }
@@ -75,8 +78,8 @@ $(function () {
     // 激活样式
     function navActive(hash) {
         // 点击增加当前激活样式，删除其他激活样式
-        if( hash =='' ) hash="#home";
-        if( hash.includes('personal')) hash="#personal";
+        if (hash == '') hash = "#home";
+        if (hash.includes('personal')) hash = "#personal";
 
         $(".main-top .nav-active a[href='" + hash + "']").addClass('active').closest('li').siblings().find('a').removeClass("active")
     }

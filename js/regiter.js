@@ -60,56 +60,9 @@ $(function () {
             titleErr($username, '用户名不能为空')
             uFlag = false
         }
-    })
-    // // 封装验证函数
-    // function regFn(name, reg, flag, title1, title2) {
-    //     name.blur(function () {
-    //         // 获取输入值
-    //         var nVal = name.val()
-    //         if (nVal) {//有值
-    //             if (reg.test(nVal)) {//合法
-    //                 // console.log(1);      
-    //                 titleYes(name)
-    //                 flag = true
-    //                 // console.log(flag);
-
-    //             } else {//不合法
-    //                 // console.log(2);
-    //                 titleErr(name, title2)
-    //                 flag = true
-    //             }
-    //         } else {//没有值
-    //             titleErr(name, title1)
-    //             flag = true
-    //         }
-    //     })
-
-    // }
-
-    // function regFn(name, reg, flag, title1, title2) {
-    //     var nVal = name.val()
-    //     if (nVal) {//有值
-    //         if (reg.test(nVal)) {//合法
-    //             // console.log(1);      
-    //             titleYes(name)
-    //             flag = true
-    //             // console.log(flag);
-    //         } else {//不合法
-    //             // console.log(2);
-    //             titleErr(name, title2)
-    //             flag = true
-    //         }
-    //     } else {//没有值
-    //         titleErr(name, title1)
-    //         flag = true
-    //     }
-    // }
-    // $pwd.blur(function(){
-    //     regFn($pwd, /^\w{4,12}$/, pflag, '请输入昵称', '请输入合法昵称')
-    // })
+    })    
     // 密码
     $pwd.blur(function () {
-        // regFn($nickname, /^[a-zA-Z]\w{2,11}$/, nFlag, '请输入昵称', '请输入合法昵称')
         var pVal = $pwd.val()
         if (pVal) {//有值
             if (/^\w{4,12}$/.test(pVal)) {//合法   
@@ -127,7 +80,6 @@ $(function () {
     })
     // 邮箱
     $email.blur(function () {
-        // regFn($nickname, /^[a-zA-Z]\w{2,11}$/, nFlag, '请输入昵称', '请输入合法昵称')
         var eVal = $email.val()
         if (eVal) {//有值
             if (/^([a-zA-Z]|[0-9])(\w|\-)+@[a-zA-Z0-9]+\.([a-zA-Z]{2,4})$/.test(eVal)) {//合法    
@@ -158,7 +110,8 @@ $(function () {
             titleErr($nickname, '请输入昵称')
             nFlag = false
         }
-    })
+    })   
+
     // 封装验证失败后的提示信息
     function titleErr(name, title) {
         name.css({ 'border': '1px solid red' }).next().removeClass('error').text(title).css({ 'color': 'red' })
@@ -176,6 +129,10 @@ $(function () {
             return false
         } else {//勾选
             // 判断标杆            
+            // console.log(uFlag);
+            // console.log(pFlag);
+            // console.log(eFlag);
+            // console.log(nFlag);
             if (uFlag && pFlag && eFlag && nFlag) {//都为true时
                 console.log(11);
                 // return false

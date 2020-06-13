@@ -1,0 +1,105 @@
+<div class="alert alert-primary" role="alert">
+    <h3>信用借款</h3>
+    <p class="d-flex"><span>授信额度:<span class="money">2000</span></span><span>可借金额:<span class="money">2000</span></span>
+    </p>
+</div>
+<div>
+    <p><span>借款信息</span><span class="btnBox">信用标</span></p>
+    <hr>
+</div>
+<div class="row">
+    <div class="col-md-6">
+        <div class="input-group mb-3">
+            <label for="borrowmoney" class="title">借款金额</label>
+            <input type="number" class="form-control" id="borrowmoney" autofocus>
+            <div class="input-group-append">
+                <span class="input-group-text" >元</span>
+            </div>
+                <span class="error"></span>          
+            
+        </div>
+        <div class="input-group mb-3">
+            <label for="interest" class="title ">借款利息</label>
+            <input type="number" class="form-control" id="interest">
+            <div class="input-group-append">
+                <span class="input-group-text" >%</span>
+            </div>
+            <span class="error"></span>
+            
+
+        </div>
+        <div class="input-group mb-3">
+            <label for="borrowtime" class="title ">借款期限</label>
+            <select class="custom-select" id="borrowtime">
+                <option value="1">1</option>
+                <option value="3">3</option>
+                <option value="6">6</option>
+                <option value="9">9</option>
+                <option value="12">12</option>
+                <option value="24">24</option>
+            </select>
+            <div class="input-group-append">
+                <span class="input-group-text" >月</span>
+            </div>
+        </div>
+        <div class="input-group mb-3">
+            <label  class="title ">还款方式</label>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="repaytype" id="inlineRadio1" value="0" checked>
+                <label class="form-check-label" for="inlineRadio1" >按月分期</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="repaytype" id="inlineRadio2" value="1">
+                <label class="form-check-label" for="inlineRadio2">按月到期</label>
+            </div>
+        </div>
+        <div class="input-group mb-3">
+            <label for="minbid" class="title">最小投标</label>
+            <input type="number" class="form-control" id="minbid">
+            <div class="input-group-append">
+                <span class="input-group-text" >元</span>
+            </div>
+            <span class="error"></span>
+        </div>
+        <div class="input-group mb-3">
+            <label for="bouns" class="title ">投标奖金</label>
+            <input type="number" class="form-control" id="bouns">
+            <div class="input-group-append">
+                <span class="input-group-text" >%</span>
+            </div>
+            <span class="error"></span>
+        </div>
+        <div class="input-group mb-3">
+            <label for="days" class="title ">招标天数</label>
+            <select class="custom-select" id="days">
+                <option value="1">1</option>
+                <option value="3">3</option>
+                <option value="6">6</option>
+                <option value="9">9</option>
+                <option value="12">12</option>
+                <option value="24">24</option>
+            </select>
+            <div class="input-group-append">
+                <span class="input-group-text" >天</span>
+            </div>
+           
+        </div>
+        <div class="input-group mb-3">
+            <label for="title" class="title ">借款标题</label>
+            <input type="text" class="form-control" id="title">  
+            <span class="error"></span>          
+        </div>
+        <div class="input-group mb-3">
+            <label for="info" class="title">借款描述</label>
+            <textarea class="form-control" id="info" rows="2"></textarea>
+            <span class="error"></span>
+        </div>
+        <div class="borrowBox">
+            <button type="button" class="btn " id="borrowApplyBtn">提交申请</button>
+        </div>
+    </div>
+</div>
+
+<link rel="stylesheet" href="../../dist/css/borrow_apply.min.css">
+<!-- 引入当前js -->
+<script src="./dist/js/borrow_apply.min.js"></script>

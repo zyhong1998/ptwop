@@ -71,7 +71,7 @@
             </div>
             <div class="top-nav">
                 <ul>
-                    <li><a href="./index.html">首页</a></li>
+                    <li><a href="./index.html">回首页</a></li>
                     <li><a href="./personal.html" class="active">账户充值</a></li>
                 </ul>
             </div>
@@ -125,10 +125,10 @@
                     <p>款或转账成功后，再选择你所汇款或转账的账号，并填写以下完整的信息后，提交您的线下充值申请。我们将会在下个工作日核对您的申请。</p>
                 </div>
                 <div>
-                    <form>
+                    <div class="form">
                         <div class="form-group row">
-                            <label for="inputPassword" class="col-sm-2 col-form-label">银 &emsp;行</label>
-                            <select class="form-control select" style="width: 480px;" name="bankInfo.id">
+                            <label for="bankcode" class="col-sm-2 col-form-label">银 &emsp;&emsp;&emsp;行</label>
+                            <select class="form-control select" style="width: 480px;" name="bankInfo.id" id="bankcode">
     
                                 <option value="1">工商银行62170038233428412750(府城大道支行)</option>
     
@@ -139,31 +139,21 @@
                             </select>
                         </div>
                         <div class="form-group row">
-                            <label for="inputPassword" class="col-sm-2 col-form-label">交 易 号</label>
+                            <label for="chargemoney" class="col-sm-2 col-form-label">充值金额(元)</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="inputPassword">
+                                <input type="number" class="form-control" id="chargemoney" placeholder="输入充值金额">
                             </div>
+                            <span class="error"></span>
                         </div>
                         <div class="form-group row">
-                            <label for="inputPassword" class="col-sm-2 col-form-label">充值时间</label>
+                            <label for="inputPassword" class="col-sm-2 col-form-label">说&emsp;&emsp; &emsp;明</label>
                             <div class="col-sm-10">
-                                <input type="datetime-local" class="form-control" id="inputPassword">
+                                <textarea name="" id="" class="textarea" placeholder="输入描述"></textarea >
                             </div>
+                            <span class="error"></span>
                         </div>
-                        <div class="form-group row">
-                            <label for="inputPassword" class="col-sm-2 col-form-label">充值金额</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" id="inputPassword">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="inputPassword" class="col-sm-2 col-form-label">说 &emsp;明</label>
-                            <div class="col-sm-10">
-                                <textarea name="" id="" class="textarea"></textarea>
-                            </div>
-                        </div>
-                        <button type="button" class="btn btn-primary">确认提交</button>
-                    </form>
+                        <button type="button" class="btn " id="rechargeBtn">确认充值</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -198,7 +188,7 @@
     <!-- 引入bootstrap的js -->
     <script src="./lib/bootstrap4/js/bootstrap.min.js"></script>
     <!-- 引入当前js -->
-    <!-- <script src="./dist/js/login.min.js"></script> -->
+    <script src="./dist/js/recharge.min.js"></script>
 </body>
 
 </html>

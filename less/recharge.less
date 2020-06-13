@@ -4,29 +4,34 @@
 }
 
 .container {
-    
-    .content-bd{
+
+    .content-bd {
         border: 1px solid #c69b5f;
         padding: 20px;
         border-radius: 4px;
     }
+
     .alert-warning {
         background-color: rgb(230, 182, 116);
         color: #444;
+
         h4 {
             color: #333;
             margin-left: 10px;
         }
     }
-    th{
+
+    th {
         border-top: 1px solid #c69b5f;
         border-bottom: 2px solid #c69b5f !important;
     }
-    td{
+
+    td {
         border-top: 1px solid #c69b5f;
     }
+
     tbody {
-        
+
         th {
             padding: 2px;
             width: 150px;
@@ -35,7 +40,7 @@
             background-position: -4px 8px;
             border-bottom: 0px solid #c69b5f !important;
         }
-       
+
         >tr:nth-child(2) {
             th {
                 background-position: -4px -27px;
@@ -54,37 +59,68 @@
         color: #337ab7;
     }
 
-    form {
+
+
+
+
+    .form {
         margin-left: 110px;
-    }
 
-    .form-group {
-        input {
-            margin-left: -90px;
-            width: 400px;
-            border: 1px solid #c69b5f;
+        .form-group {
+            
+            input {
+                margin-left: -77px;
+                width: 400px;
+                border: 1px solid #c69b5f;
+            }
+
+            .textarea {
+                margin-left: -77px;
+                width: 400px;
+                height: 80px;
+                border: 1px solid #c69b5f;
+                text-indent: 10px;
+            }
+
+            .select {
+                margin-left: -62px;
+                width: 400px;
+                border: 1px solid #c69b5f;
+            }
+
+            
+
+        }
+        .row{
+            position: relative;
+
+            .error {
+                display: inline-block;
+                width: 150px;
+                height: 40px;
+                margin-left: 10px;
+                margin-top: 6px;
+                position: absolute;
+                top: 0px;
+                right: 372px;
+            }
         }
 
-        .textarea {
-            margin-left: -90px;
-            width: 800px;
-            height: 80px;
-            border: 1px solid #c69b5f;
-
-        }
-
-        .select {
-            margin-left: -75px;
-            width: 400px;
-            border: 1px solid #c69b5f;
-
-        }
-
-    }
-
-    form{
         .btn {
+            padding: 10px 20px;
             margin-left: 90px;
+            background-color: rgb(198, 155, 95);
+            border: 1px solid #c69b5f;
+            color: #fff;
+            letter-spacing: 1px;
+            text-indent: 10px;
+
+            &:hover {
+                background-color: rgb(179, 115, 44);
+                border: 1px solid #c69b5f;
+                color: #fff;
+            }
+
         }
     }
 }
