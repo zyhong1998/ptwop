@@ -1,4 +1,12 @@
 $(function () {
+    isLogin()
+    function isLogin() {
+        if (!(localStorage.getItem("uid") && localStorage.getItem("username"))) {
+            alert("请先登录！！！");
+            location.href = "/login.html";
+            return false
+        }
+    }
     // 获取当前会话值
     var type = sessionStorage.getItem('type')
     // console.log(type);
@@ -164,7 +172,7 @@ $(function () {
         } else {
             // alert(1)
             // 获取输入值
-            var id = localStorage.getItem('uid')
+            var id = localStorage.getItem('username')
             var borrowmoney = $('#borrowmoney').val()
             var interest = $('#interest').val()
             var borrowtime = $('#borrowtime').val()
@@ -179,7 +187,7 @@ $(function () {
                 url: "http://127.0.0.1:8848/borrow.php",
                 type: "POST",
                 data: {
-                    id: id,
+                    acc: id,
                     borrowmoney: borrowmoney,
                     interest: interest,
                     borrowtime: borrowtime,

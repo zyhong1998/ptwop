@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录</title>
+    <link rel="icon" href="./images/favicon.ico" sizes="16x16">
+    <!-- 引入重置样式 -->
+    <link rel="stylesheet" href="./dist/css/reset.min.css">
+    <!-- 引入公共样式 -->
+    <link rel="stylesheet" href="./dist/css/common.min.css">
+    <!-- 引入bootstrap的css -->
+    <link rel="stylesheet" href="./lib/bootstrap4/css/bootstrap.min.css">
+    <!-- 引入当前页面css -->
+    <link rel="stylesheet" href="./dist/css/borrow_info.min.css">
+</head>
+
+<body>
+    <!-- 内容区-顶部 -->
+    <main class="main main-top">
+        <div class="top container">
+            <div class="logo">
+                <a href="#"><img src="/images/logo_kxd.png" alt=""></a>
+                <a href="#"><img src="/images/kxd-slogan.png" alt=""></a>
+            </div>
+            <div class="top-nav">
+                <ul>
+                    <li><a href="./index.html">回首页</a></li>
+                    <li><a href="#" class="active">投资</a></li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    <!-- 投资区 -->
+    <div class="container ">
+        <div class="info">
+            <h1>借款详情</h1>
+            <hr>
+            <p>
+                <span>借款人:</span>
+                <span id="userid"></span>
+            </p>
+            <p>
+                <span>借款标题:</span>
+                <span id="title"></span>
+            </p>
+            <p>
+                <span>借款金额(元):</span>
+                <span id="borrowmoney"></span>
+            </p>
+            <p>
+                <span>已经借到金额(元):</span>
+                <span id="ownmoney"></span>
+            </p>
+    
+            <p>
+                <span>借款利率(%):</span>
+                <span id="interest"></span>
+            </p>
+            <p>
+                <span>奖金(%):</span>
+                <span id="bouns"></span>
+            </p>
+            <p>
+                <span>借款描述:</span>
+                <span id="info"></span>
+            </p>
+            <div class="form-group row">
+                
+                <div class="col-sm-3">
+                    <input type="number" class="form-control" id="chargemoney" placeholder="输入投资金额...">
+                </div>
+                
+                <span class="error"></span>
+            </div>
+            <button type="button" class=" btn " id="chargeBtn">确认投资</button>
+        </div>
+        
+        
+    </div>
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="top">
+            <div class="container">
+                <div>
+                    <p>服务电话</p>
+                    <p class="tel">400-621-6021</p>
+                    <p>人工服务时间</p>
+                    <p>法定工作日9:00-22:00</p>
+                    <p>周六 周日9:00-18:00</p>
+                </div>
+                <div></div>
+                <div>
+                    <p>版权所有 © 无锡开鑫网络借贷信息中介有限公司</p>
+                    <p>Copyright © 2016-2019 Wuxi Kaixin Peer-to-Peer lending information</p>
+                    <p>intermediary Co., Ltd. All Rights Reserved</p>
+                    <p><a href="#">苏ICP备18024778号-1</a></p>
+                    <p><a href="#"><img src="./images/sgwab.png" alt="">苏公网安备 32021102000767号</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- 引入jq -->
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <!-- 引入bootstrap的poper -->
+    <script src="./lib/popper/umd/popper.min.js"></script>
+    <!-- 引入bootstrap的js -->
+    <script src="./lib/bootstrap4/js/bootstrap.min.js"></script>
+    <!-- 引入当前js -->
+    <script src="./dist/js/borrow_info.min.js"></script>
+</body>
+
+</html>

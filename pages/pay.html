@@ -1,4 +1,6 @@
+<link rel="stylesheet" href="../lib/xlPaging/css/xlPaging.css">
 <link rel="stylesheet" href="../dist/css/pay.min.css">
+<script src="../lib/xlPaging/js/jquery.xlPaging.js"></script>
 <script src="../dist/js/pay.min.js"></script>
 <div class="container content">
     <h4>投资列表</h4>
@@ -28,8 +30,8 @@
             <th scope="col">操作</th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
+        <tbody id="payList">
+          <!-- <tr>
             <td scope="row">波波</td>
             <td>借两千，渡难关</td>
             <td>10.00%</td>
@@ -46,8 +48,10 @@
             <td>按月分期还款</td>
             <td>100.00%</td>
             <td><a href="#">查看</a></td>
-          </tr>
-          
+          </tr>           -->
         </tbody>
       </table>
+      <ul id="page">
+
+      </ul>
 </div>

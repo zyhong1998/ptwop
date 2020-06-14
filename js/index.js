@@ -112,4 +112,11 @@ $(function () {
             $('#reg').html('<a href="./regiter.html">立即注册</a>')
         }
     })
+    $('a[href="#personal"]').click(function(){       
+            if (!(localStorage.getItem("uid") && localStorage.getItem("username"))) {
+                alert("请先登录！！！");
+                location.href = "/login.html";
+                return false
+            }    
+    })
 })

@@ -1,4 +1,12 @@
 $(function () {
+    isLogin()
+    function isLogin() {
+        if (!(localStorage.getItem("uid") && localStorage.getItem("username"))) {
+            alert("请先登录！！！");
+            location.href = "/login.html";
+            return false
+        }
+    }
     // 定义标杆
     var nicknameFlag = false
     var emailFlag = false
